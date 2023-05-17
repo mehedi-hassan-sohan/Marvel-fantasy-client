@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; 
+.background{
+    background-image: url('https://i.ibb.co/7YXHs1s/360-F-122488650-ka-Of-P8-Udo-TPZt-Rrl-Ccs-IR1l-Doq2-Or-QZS.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  

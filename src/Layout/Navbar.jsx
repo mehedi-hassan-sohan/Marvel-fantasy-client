@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
         <div className='container ms-24  decoration-neutral-800 '>
-            <div className="navbar   bg-[#0077C2]   rounded-xl text-[#FFFFFF] ">
+            <div className="navbar   bg-[#0077C2]   rounded-xl  ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -20,7 +20,7 @@ const Navbar = () => {
                                
                             </li>
                        
-                          <Link to='/'  >Home</Link>
+                          <Link to='/' >Home</Link>
                            <Link to='/'>All toys </Link>
                            <Link to='/'>Add a toys </Link>
                            <Link to='/'>My Toys </Link>
@@ -31,7 +31,7 @@ const Navbar = () => {
                         </ul>
                     </div> 
                     <img className='w-24' src='https://i.ibb.co/fFJRbY8/iron-man-png-19242.png' alt="" />
-                    <a className="btn btn-ghost normal-case text-4xl"> 
+                    <a className="btn btn-ghost normal-case text-4xl text-white "> 
                     
                     Marvel Fantasy World 
 </a>
@@ -41,18 +41,18 @@ const Navbar = () => {
                       
                         <li tabIndex={0}>
                            
-                        <Link to='/'>Home</Link>
-                           <Link to='/'>All toys </Link>
-                           <Link to='/'>Add a toys </Link>
-                           <Link to='/'>My Toys </Link>
-                           <Link to='/'>Blogs</Link>
+                        <Link to='/'   className='text-white'>Home</Link>
+                           <Link to='/'className='text-white'>All toys </Link>
+                           <Link to='/'className='text-white'>Add a toys </Link>
+                           <Link to='/'className='text-white'>My Toys </Link>
+                           <Link to='/blog'className='text-white'>Blogs</Link>
                          
                         </li>
                         
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Login</a>
+                    <Link to='/login' className="btn bg-black text-white">Login</Link>
                 </div>
             </div>
         </div>
