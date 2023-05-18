@@ -99,9 +99,10 @@ const Register = () => {
             placeholder="Password"
           />
           {showPassword ? (
-            <FaEyeSlash onClick={togglePasswordVisibility} />
+              <FaEye onClick={togglePasswordVisibility} />
+          
           ) : (
-            <FaEye onClick={togglePasswordVisibility} />
+            <FaEyeSlash onClick={togglePasswordVisibility} />
           )}
         </div>
 

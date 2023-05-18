@@ -3,7 +3,7 @@ import {FaGithub, FaFacebook ,FaTwitterSquare} from 'react-icons/fa'
  
 const Footer = () => {
     return (
-        <div className=' m-24 container' >
+        <div className=' md:m-24 md:container' >
             <footer className="footer p-10  bg-[#0077C2]   rounded-xl text-[#FFFFFF] ">
   <div>
     <img className='w-24' src="https://i.ibb.co/Qvtf2yZ/hulk-PNG95.png" alt="" />

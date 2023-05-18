@@ -95,9 +95,10 @@ const Login = () => {
             placeholder="Password"
           />
           {showPassword ? (
-            <FaEyeSlash onClick={togglePasswordVisibility} />
-          ) : (
             <FaEye onClick={togglePasswordVisibility} />
+           
+          ) : (
+            <FaEyeSlash onClick={togglePasswordVisibility} />
           )}
         </div>
 
