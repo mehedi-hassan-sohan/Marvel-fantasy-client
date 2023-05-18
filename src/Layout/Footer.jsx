@@ -3,18 +3,21 @@ import {FaGithub, FaFacebook ,FaTwitterSquare} from 'react-icons/fa'
  
 const Footer = () => {
     return (
-        <div className=' md:m-24 md:container' >
-            <footer className="footer p-10  bg-[#0077C2]   rounded-xl text-[#FFFFFF] ">
+        <div className=' md:m-20 md:container' >
+            <footer className="footer p-9  bg-[black]   rounded-xl text-[#FFFFFF] ">
   <div>
     <img className='w-24' src="https://i.ibb.co/Qvtf2yZ/hulk-PNG95.png" alt="" />
     <p> Marvel Fantasy World <br/>Providing reliable tech since 1962 <br />   
     <p> Number:(276) 326-1571
 Spring Mobile Home <br /> Pke Hl
 Bluefield, Virginia(VA), 24605</p>
-    <div className='flex mt-5'>
-    <FaGithub fontSize='30px'></FaGithub> <FaFacebook fontSize='30px'></FaFacebook> <FaTwitterSquare fontSize='30px'></FaTwitterSquare>
+    <div className='flex mt-5 '>
+    <FaGithub fontSize='30px'></FaGithub> <FaFacebook fontSize='30px'></FaFacebook> <FaTwitterSquare fontSize='30px'></FaTwitterSquare>   
+      
     </div>
-   
+    <div className='mt-10'>
+    <p>Copyright © 2023 - All right reserved by Marvel Fantasy World Ltd</p>
+  </div>
         </p> 
 
   </div> 
@@ -37,8 +40,11 @@ Bluefield, Virginia(VA), 24605</p>
     <a className="link link-hover">Terms of use</a> 
     <a className="link link-hover">Privacy policy</a> 
     <a className="link link-hover">Cookie policy</a>
-  </div>
-</footer>
+  </div>   
+
+</footer>   
+
+
         </div>
     );
 };

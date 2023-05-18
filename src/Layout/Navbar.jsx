@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
-import { FaUserCircle } from 'react-icons/fa';
+import { FaAlignLeft, FaBars, FaUserCircle } from 'react-icons/fa';
 
 const Navbar = () => {
   const { userInfo, logOut } = useContext(AuthContext);
@@ -16,24 +16,11 @@ const Navbar = () => {
 
   return (
     <div className="md:container md:ms-24  decoration-neutral-800 ">
-      <div className="navbar   bg-[#0077C2]   rounded-xl  ">
+      <div className="navbar   bg-black   rounded-xl  ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+              <FaAlignLeft fontSize='20px' className='bg-white'></FaAlignLeft>
             </label>
             <ul
               tabIndex={0}
@@ -56,7 +43,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/" >Home</Link>
               </li>
               <li>
                 <Link to="/">All toys</Link>
@@ -86,23 +73,23 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li tabIndex={0}>
-              <Link to="/">Home</Link>
+              <Link to="/" className='text-white'>Home</Link>
             </li>
             <li>
-              <Link to="/">All toys</Link>
+              <Link to="/"  className='text-white'>All toys</Link>
             </li>
             {userInfo ? (
               <>
                 <li>
-                  <Link to="/">Add a toy</Link>
+                  <Link to="/"  className='text-white'>Add a toy</Link>
                 </li>
                 <li>
-                  <Link to="/">My Toys</Link>
+                  <Link to="/"  className='text-white'>My Toys</Link>
                 </li>
               </>
             ) : null}
             <li>
-              <Link to="/blog">Blogs</Link>
+              <Link to="/blog"  className='text-white'>Blogs</Link>
             </li>
           </ul>
         </div>
@@ -118,7 +105,7 @@ const Navbar = () => {
                   <img src={userInfo.photoURL} alt="" />
                 </div>
               </label>
-              <button onClick={handleLogOut} className="btn bg-black">
+              <button onClick={handleLogOut} className="btn bg-[#000080]">
                 Sign Out
               </button>
             </div>
@@ -126,7 +113,7 @@ const Navbar = () => {
             <div className="flex">
               <FaUserCircle className="text-white text-4xl mr-4" />
               <Link to="/login">
-                <button className="btn bg-black">Login</button>
+                <button className="btn  bg-[#000080]">Login</button>
               </Link>
             </div>
           )}

@@ -1,9 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities; 
-.background{
-    background-image: url('https://i.ibb.co/7YXHs1s/360-F-122488650-ka-Of-P8-Udo-TPZt-Rrl-Ccs-IR1l-Doq2-Or-QZS.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+
+.carousel-item {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 70%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Media queries for small devices */
+@media (max-width: 768px) {
+  .overlay {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    padding: 8px;
   }
-  
+}
+
+ 
