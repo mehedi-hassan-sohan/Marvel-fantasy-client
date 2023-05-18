@@ -1,4 +1,5 @@
 import React from 'react';
+import HomeGallery from './HomeGallery';
 
 const Home = () => {
   return (
@@ -43,7 +44,7 @@ const Home = () => {
         <a href="#item4" className="btn btn-xs">4</a>
       </div>
       <div>
-        <h1 className='text-4xl text-center mt-10 '> Meet Our avengers Heros </h1>
+        <h1 className='text-4xl text-center mt-10 '> Meet Our avengers Heros Toys </h1>
         <img className='relative md:ms-48 mt-10 rounded-xl' src="https://i.ibb.co/VqBC709/ENT-D100-Marvel-Brand-Page-Banner-2000x300px.jpg" alt="" />
       </div>
 
@@ -102,8 +103,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-    </div>
+ <HomeGallery></HomeGallery>
+    </div> 
 
 
   );
