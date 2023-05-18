@@ -2,10 +2,12 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
 
 
 
-const Register = () => {
+const Register = () => { 
+  const {register, setUserInfo} =useContext(AuthContext)
   const [error,setError] = useState('')
   const [success,setSuccess] = useState('')
   const [showPassword, setShowPassword] = useState(false);
@@ -47,7 +49,7 @@ const Register = () => {
   return ( 
   <div className="flex item-center justify-center gap-6 "> 
      <div className="mt-28 shadow-lg h-1/3" >
-      <img src="https://i.ibb.co/gVwCLG0/360-F-339709048-ZITR4wr-Vs-OXCKdj-Hncdtab-SNWp-Ihia-R7.jpg" alt="" />
+      <img src="https://i.ibb.co/WxpKwrL/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer.jpg" alt="" />
      </div>
     <div className="mt-20 mb-64 md:w-[410px] ">
       <form onSubmit={handleRegister} className="border p-10 shadow-2xl">

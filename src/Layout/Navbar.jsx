@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { FaUserCircle } from 'react-icons/fa';
 
 const Navbar = () => {
+    const {userInfo,logOut} = useContext(AuthContext)
+    const handleLogOut = () => {
+        logOut()
+          .then()
+          .catch((error) => {
+            console.log(error.message);
+          });
+      };
+    
     return (
         <div className='container ms-24  decoration-neutral-800 '>
             <div className="navbar   bg-[#0077C2]   rounded-xl  ">
@@ -52,7 +63,30 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to='/login' className="btn bg-black text-white">Login</Link>
+                {userInfo ? (
+            <div className="flex">
+              <label
+                tabIndex={0}
+                className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom tooltip-secondary"
+                data-tip={userInfo.displayName}
+              >
+                <div className="w-10 rounded-full">
+                  <img src={userInfo.photoURL} />
+                </div>
+              </label>
+
+              <button onClick={handleLogOut} className="btn bg-black">
+                Sign Out
+              </button>
+            </div>
+          ) : (
+            <div className="flex">
+              <FaUserCircle className="text-white text-4xl mr-4"></FaUserCircle>
+              <Link to="/login">
+                <button className="btn bg-black">Login</button>
+              </Link>
+            </div>
+          )}
                 </div>
             </div>
         </div>

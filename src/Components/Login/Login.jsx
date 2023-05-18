@@ -2,9 +2,11 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
 
 
-const Login = () => {
+const Login = () => { 
+   const { googleLogin , SignIn ,setUserInfo} = useContext(AuthContext)
   // const [googleData,setGoogleData] = useState({})
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -50,27 +52,21 @@ const Login = () => {
   };
   // Google Login -------------------------
   // ------
-  // GitHub Login -------------------------
-  const handleGitHubLogin = (e) => {
-    gitHubLogin()
-      .then((result) => {
-        const loggedUser = result.user;
-        setUserInfo(loggedUser);
-        navigate(from);
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  };
-  // GitHub Login -------------------------
+ 
 
   const togglePasswordVisibility = () => {
     setShowPassword((show) => !show);
   };
 
   return (
-    <div className="mt-20 md:w-[400px] mx-auto border p-10 shadow-2xl">
-      {/* login form */}
+   <div className="flex ms-40 gap-10"> 
+   <div className='mt-28 ms-36 shadow-lg h-1/3'>
+
+    <img src="https://i.ibb.co/gVwCLG0/360-F-339709048-ZITR4wr-Vs-OXCKdj-Hncdtab-SNWp-Ihia-R7.jpg" alt="" />
+   </div>
+    <div className="mt-20 md:w-[400px]  border p-10 shadow-2xl">
+      {/* login form */}  
+     
       <form onSubmit={handleEmailLogin}>
         <h1 className="text-5xl font-semibold mb-5 ">Login Please</h1>
         <div>
@@ -127,9 +123,7 @@ const Login = () => {
       </form>
       <hr className="border-black mb-5 mt-4" />
       <div className="flex flex-col gap-4">
-        <button onClick={handleGitHubLogin} className="btn btn-outline">
-          <FaGithub className="text-xl mr-2"></FaGithub>GitHub
-        </button>
+     
         <button
           onClick={handleGoogleLogin}
           className="btn btn-outline btn-accent"
@@ -137,6 +131,7 @@ const Login = () => {
           <FaGoogle className="text-xl mr-2"></FaGoogle>Google
         </button>
       </div>
+    </div>
     </div>
   );
 };
