@@ -46,7 +46,9 @@ const Home = () => {
         <a href="#item4" className="btn btn-xs">4</a>
       </div>
       <div>
-        <h1 className='text-4xl text-center mt-10 '> Meet Our avengers Heros Toys </h1>
+        <h1 className='text-4xl text-center mt-10 '> Buy Your Favorite <br /> Character Toys </h1> 
+        <hr className="border-2 border-black w-1/3 mx-auto mt-4 mb-10" />
+        
         <img className='relative md:ms-48 mt-10 rounded-xl' src="https://i.ibb.co/VqBC709/ENT-D100-Marvel-Brand-Page-Banner-2000x300px.jpg" alt="" />
       </div>
 

@@ -46,12 +46,12 @@ const Navbar = () => {
                 <Link to="/" >Home</Link>
               </li>
               <li>
-                <Link to="/">All toys</Link>
+                <Link to="/allToys">All toys</Link>
               </li>
               {userInfo ? (
                 <>
                   <li>
-                    <Link to="/">Add a toy</Link>
+                    <Link to="/addToys">Add a toy</Link>
                   </li>
                   <li>
                     <Link to="/">My Toys</Link>
@@ -76,7 +76,7 @@ const Navbar = () => {
               <Link to="/" className='text-white'>Home</Link>
             </li>
             <li>
-              <Link to="/"  className='text-white'>All toys</Link>
+              <Link to="/allToys"  className='text-white'>All toys</Link>
             </li>
             {userInfo ? (
               <>

@@ -8,6 +8,8 @@ import Blog from "../src/Components/Blog/Blog";
 import Login from "../src/Components/Login/Login";
 import Register from "../src/Components/Register/Register";
 import AddToys from "../src/Components/AddToys/AddToys";
+import AllToys from "../src/Components/AllToys/AllToys";
+import ViewDetails from "../src/Components/ViewDetails/ViewDetails";
 
   const router = createBrowserRouter([
     {
@@ -34,6 +36,16 @@ import AddToys from "../src/Components/AddToys/AddToys";
              path:'/addToys',
              element:<AddToys></AddToys> 
 
+         },
+          {
+             path:'/allToys',
+             element:<AllToys></AllToys>
+
+         },
+         {
+          path:'/viewDetails/:id',
+          element:<ViewDetails></ViewDetails>,
+         
          }
       ]
     },
