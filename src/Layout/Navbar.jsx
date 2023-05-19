@@ -81,7 +81,7 @@ const Navbar = () => {
             {userInfo ? (
               <>
                 <li>
-                  <Link to="/"  className='text-white'>Add a toy</Link>
+                  <Link to="/addToys"  className='text-white'>Add a toy</Link>
                 </li>
                 <li>
                   <Link to="/"  className='text-white'>My Toys</Link>

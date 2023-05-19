@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaHeart } from 'react-icons/fa';
+import HomeTab from './HomeTab';
 
 const HomeGallery = () => {
     return (
@@ -61,12 +62,12 @@ const HomeGallery = () => {
                    <div>
                    <p className='mt-2'>This replica of Black Panther's Vibranium claws is a detailed and wearable collectible. It is designed to resemble the claws seen in the movies, with intricate detailing and a comfortable fit. Fans of Black Panther can feel empowered and ready to defend Wakanda.</p>  
                      <FaHeart className=' ms-80 mt-7' fontSize='30px'></FaHeart>
-                   
                    </div>
 
                 </div>
             </div>
            </div>
+           <HomeTab></HomeTab>
         </div>
     );
 };
