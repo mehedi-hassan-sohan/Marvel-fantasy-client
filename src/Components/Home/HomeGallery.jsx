@@ -67,7 +67,7 @@ const HomeGallery = () => {
                 </div>
             </div>
            </div>
-           <HomeTab></HomeTab>
+       
         </div>
     );
 };

@@ -1,6 +1,8 @@
 import React from 'react';
 import HomeGallery from './HomeGallery';
 
+import HomeTab from './HomeTab';
+
 const Home = () => {
   return (
     <div className='mt-5 '>
@@ -103,7 +105,9 @@ const Home = () => {
           </div>
         </div>
       </div>
- <HomeGallery></HomeGallery>
+ <HomeGallery></HomeGallery> 
+    <HomeTab></HomeTab>
+  
     </div> 
 
 
