@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="md:container md:ms-24  decoration-neutral-800 ">
+    <div className=" md:mx-20   decoration-neutral-800 ">
       <div className="navbar   bg-black   rounded-xl  ">
         <div className="navbar-start">
           <div className="dropdown">

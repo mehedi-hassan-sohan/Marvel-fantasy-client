@@ -49,10 +49,10 @@ const Home = () => {
         <h1 className='text-4xl text-center mt-10 '> Buy Your Favorite <br /> Character Toys </h1> 
         <hr className="border-2 border-black w-1/3 mx-auto mt-4 mb-10" />
         
-        <img className='relative md:ms-48 mt-10 rounded-xl' src="https://i.ibb.co/VqBC709/ENT-D100-Marvel-Brand-Page-Banner-2000x300px.jpg" alt="" />
+        <img className='relative md:mx-auto mt-10 rounded-xl' src="https://i.ibb.co/VqBC709/ENT-D100-Marvel-Brand-Page-Banner-2000x300px.jpg" alt="" />
       </div>
 
-      <div className='ms-5 mb-10  md:flex mt-10  '>
+      <div className='ms-5 md:ms-24 mb-10  md:flex mt-10  '>
         <div className='rounded-xl ms-6 '>
           <div className="card w-96 bg-white  rounded-2xl shadow-xl mb-5" >
             <figure><img className='w-[300px]' src='https://i.ibb.co/JRXPmP9/563342-B1667-1-300-Wx300-H-context-b-WFzd-GVyf-HJvb3-R8-NTU5-NTN8a-W1h-Z2-Uvan-Bl-Z3xo-Ym-Mva-GNk-Lz.jpg' alt="Shoes" /></figure>

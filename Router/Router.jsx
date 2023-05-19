@@ -10,11 +10,13 @@ import Register from "../src/Components/Register/Register";
 import AddToys from "../src/Components/AddToys/AddToys";
 import AllToys from "../src/Components/AllToys/AllToys";
 import ViewDetails from "../src/Components/ViewDetails/ViewDetails";
+import Error from "../src/Components/Error.jsx/Erorr";
 
   const router = createBrowserRouter([
     {
       path: "/",
       element:<Main></Main>, 
+      errorElement:<Error></Error>,
       children:[ 
          { 
             path:'/' ,
@@ -45,6 +47,7 @@ import ViewDetails from "../src/Components/ViewDetails/ViewDetails";
          {
           path:'/viewDetails/:id',
           element:<ViewDetails></ViewDetails>,
+          loader:({params})=>fetch(`http://localhost:5000/addToys/${params.id}`)
          
          }
       ]
