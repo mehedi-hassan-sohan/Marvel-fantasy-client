@@ -1,10 +1,47 @@
 import React from "react";
 
 const AddToys = () => {
+  const handleToys=event=>{
+    event.preventDefault()
+    const form = event.target 
+    const  pictureUrl = form.pictureUrl.value
+    const name  = form.name.value 
+    const  sellerName = form.sellerName.value 
+    const  sellerEmail = form.sellerEmail.value 
+    const  subCategory =form.subCategory.value 
+    const  price      = form.price.value 
+    const rating = form.rating.value
+    const quantity = form.quantity.value
+    const description = form.description.value 
+    form.reset() 
+
+   console.log(pictureUrl,name,sellerEmail,sellerName,subCategory,price,rating,quantity,description);  
+   const updateToys = {pictureUrl,name,sellerEmail,sellerName,subCategory,price,rating,quantity,description}
+   console.log(updateToys); 
+
+     fetch('http://localhost:5000/addToys',{ 
+       method:"POST",
+       headers:{ 
+         'content-type' : 'application/json'
+       },  
+
+      body:  JSON.stringify(updateToys)
+        
+          
+      
+
+     })
+    .then(res=>res.json())
+    .then(data=>{ 
+      console.log(data);
+    })
+  }
+
+
   return (
     <div className=" p-6 bg-white rounded shadow-md ">
       <h2 className="text-2xl font-bold mb-4">Add a Toy</h2>
-      <form >
+      <form onSubmit={handleToys}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
         <div className="mb-4">
           <label htmlFor="pictureUrl" className="block mb-2 font-medium">
@@ -21,7 +58,7 @@ const AddToys = () => {
         </div>
         <div className="mb-4">
           <label htmlFor="name" className="block mb-2 font-medium">
-            Name:
+           Product Name:
           </label>
           <input
             type="text"
@@ -68,9 +105,9 @@ const AddToys = () => {
             required
           >
             <option value="">Select a sub-category</option>
-            <option value="Math Toys">Math Toys</option>
-            <option value="Language Toys">Language Toys</option>
-            <option value="Science Toys">Science Toys</option>
+            <option value="Avenger">Avenger</option>
+            <option value="DC">DC</option>
+            <option value="Marvel">Marvel</option>
           </select>
         </div>
         <div className="mb-4">
@@ -131,7 +168,7 @@ const AddToys = () => {
         <div className="text-center">
 <button
   type="submit"
-  className=" py-2 px-36 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+  className=" py-2 px-36 bg-black text-white rounded-md hover:bg-blue-600"
 >
   Submit
 </button>
