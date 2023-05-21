@@ -10,7 +10,9 @@ import Register from "../src/Components/Register/Register";
 import AddToys from "../src/Components/AddToys/AddToys";
 import AllToys from "../src/Components/AllToys/AllToys";
 import ViewDetails from "../src/Components/ViewDetails/ViewDetails";
-import Error from "../src/Components/Error.jsx/Erorr";
+import Error from "../src/Components/ErrorPage/Erorr";
+import MyToys from "../src/Components/MyToys/MyToys";
+import UpdatedToys from "../src/Components/UpdateToys/UpdatedToys";
 
   const router = createBrowserRouter([
     {
@@ -49,6 +51,15 @@ import Error from "../src/Components/Error.jsx/Erorr";
           element:<ViewDetails></ViewDetails>,
           loader:({params})=>fetch(`http://localhost:5000/addToys/${params.id}`)
          
+         },
+         {
+          path:'/myToys',
+          element:<MyToys></MyToys>
+         },
+         {
+          path:'/updated/:id',
+          element:<UpdatedToys></UpdatedToys>,
+          loader:({params})=>fetch(`http://localhost:5000/addToys/${params.id}`)
          }
       ]
     },

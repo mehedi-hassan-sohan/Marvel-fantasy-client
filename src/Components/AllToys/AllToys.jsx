@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../../../hooks/useTitle';
 
 const AllToys = () => { 
-    const [categories,setCategories] =useState([]) 
+    const [categories,setCategories] =useState([])  
+    useTitle('All Toys')
 
     useEffect(()=>{
       fetch('http://localhost:5000/addToys')

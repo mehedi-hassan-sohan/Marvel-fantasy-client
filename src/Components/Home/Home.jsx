@@ -1,9 +1,19 @@
-import React from 'react';
+
 import HomeGallery from './HomeGallery';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 
 import HomeTab from './HomeTab';
+import { useEffect } from 'react';
+import useTitle from '../../../hooks/useTitle';
 
-const Home = () => {
+const Home = () => { 
+  useEffect(()=>{
+    Aos.init({duration:2000});
+  },[]) 
+
+  useTitle('Home')
   return (
     <div className='mt-5 '>
       <div className="carousel  md:w-full w-[100vh]">
@@ -52,7 +62,10 @@ const Home = () => {
         <img className='relative md:mx-auto mt-10 rounded-xl' src="https://i.ibb.co/VqBC709/ENT-D100-Marvel-Brand-Page-Banner-2000x300px.jpg" alt="" />
       </div>
 
-      <div className='ms-5 md:ms-24 mb-10  md:flex mt-10  '>
+      <div className='ms-5 md:ms-24 mb-10  md:flex mt-10' data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="1000" >
         <div className='rounded-xl ms-6 '>
           <div className="card w-96 bg-white  rounded-2xl shadow-xl mb-5" >
             <figure><img className='w-[300px]' src='https://i.ibb.co/JRXPmP9/563342-B1667-1-300-Wx300-H-context-b-WFzd-GVyf-HJvb3-R8-NTU5-NTN8a-W1h-Z2-Uvan-Bl-Z3xo-Ym-Mva-GNk-Lz.jpg' alt="Shoes" /></figure>

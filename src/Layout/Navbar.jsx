@@ -50,11 +50,12 @@ const Navbar = () => {
               </li>
               {userInfo ? (
                 <>
+                 
                   <li>
                     <Link to="/addToys">Add a toy</Link>
                   </li>
                   <li>
-                    <Link to="/">My Toys</Link>
+                    <Link to="/myToys">My Toys</Link>
                   </li>
                 </>
               ) : null}
@@ -84,7 +85,7 @@ const Navbar = () => {
                   <Link to="/addToys"  className='text-white'>Add a toy</Link>
                 </li>
                 <li>
-                  <Link to="/"  className='text-white'>My Toys</Link>
+                  <Link to="/myToys"  className='text-white'>My Toys</Link>
                 </li>
               </>
             ) : null}
@@ -94,13 +95,14 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          {userInfo ? (
+          {userInfo ?.email ? (
             <div className="flex">
               <label
                 tabIndex={0}
                 className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom tooltip-secondary"
                 data-tip={userInfo.displayName}
-              >
+              > 
+              
                 <div className="w-10 rounded-full">
                   <img src={userInfo.photoURL} alt="" />
                 </div>

@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaHeart } from 'react-icons/fa';
 import HomeTab from './HomeTab';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const HomeGallery = () => {
+    useEffect(()=>{
+        Aos.init({duration:2000});
+      },[])
     return (
         <div> 
             <div className='text-4xl text-center mt-32'>
@@ -10,7 +15,9 @@ const HomeGallery = () => {
                 <hr className="border-2 border-black w-1/3 mx-auto mt-4 mb-10" />
             </div>
            <div >
-           <div className="  md:grid grid-cols-4 gap-5 md:m-20">
+           <div data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1000"className="   md:grid grid-cols-4 gap-5 md:m-20">
                 <div className="border-2  mb-10  shadow-md ">
                     <img className="  mx-auto" src="https://i.ibb.co/tqYF3B0/557510-WOLV-Primary-300-Wx300-H-context-b-WFzd-GVyf-Glt-YWdlc3wx-Nz-E5-MHxpb-WFn-ZS9qc-GVnf-Glt-YWdl.jpg" alt="Image 1"/>
                     <h1 className="text-2xl font-bold p-5">Iron Man Mark XLIII Action Figure</h1>

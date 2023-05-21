@@ -1,42 +1,52 @@
 import React from "react";
+import useTitle from "../../../hooks/useTitle";
+import { toast } from "react-hot-toast";
 
-const AddToys = () => {
-  const handleToys=event=>{
-    event.preventDefault()
-    const form = event.target 
-    const  pictureUrl = form.pictureUrl.value
-    const name  = form.name.value 
-    const  sellerName = form.sellerName.value 
-    const  sellerEmail = form.sellerEmail.value 
-    const  subCategory =form.subCategory.value 
-    const  price      = form.price.value 
-    const rating = form.rating.value
-    const quantity = form.quantity.value
-    const description = form.description.value 
-    form.reset() 
+const AddToys = () => { 
+  useTitle('Add Toys')
+  const handleToys = event => {
+    event.preventDefault();
+    const form = event.target;
+    const pictureUrl = form.pictureUrl.value;
+    const name = form.name.value;
+    const sellerName = form.sellerName.value;
+    const sellerEmail = form.sellerEmail.value;
+    const subCategory = form.subCategory.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    const quantity = form.quantity.value;
+    const description = form.description.value;
+    form.reset();
 
-   console.log(pictureUrl,name,sellerEmail,sellerName,subCategory,price,rating,quantity,description);  
-   const updateToys = {pictureUrl,name,sellerEmail,sellerName,subCategory,price,rating,quantity,description}
-   console.log(updateToys); 
+    const newToy = {
+      pictureUrl,
+      name,
+      sellerEmail,
+      sellerName,
+      subCategory,
+      price,
+      rating,
+      quantity,
+      description,
+    };
 
-     fetch('http://localhost:5000/addToys',{ 
-       method:"POST",
-       headers:{ 
-         'content-type' : 'application/json'
-       },  
-
-      body:  JSON.stringify(updateToys)
-        
-          
-      
-
-     })
-    .then(res=>res.json())
-    .then(data=>{ 
-      console.log(data);
+    fetch('http://localhost:5000/addToys', {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newToy)
     })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        toast.success("Submitted successfully");
+      })
+      .catch(error => {
+        console.error(error);
+        toast.error("Error submitting the form");
+      });
   }
-
 
   return (
     <div className=" p-6 bg-white rounded shadow-md ">

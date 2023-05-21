@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import useTitle from "../../../hooks/useTitle";
 
 
 
@@ -13,7 +14,9 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => {
     setShowPassword((show) => !show);
-  };
+  }; 
+
+  useTitle('Register')
   
   
 

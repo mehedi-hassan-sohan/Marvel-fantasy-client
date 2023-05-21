@@ -167,11 +167,11 @@ const HomeTab = () => {
         <h1 className='text-5xl text-center'>About us </h1>
         <hr className="border-2 border-black w-1/3 mx-auto mt-4 mb-10" />
 
-        <div className='md:flex gap-10'>
+        <div className='md:flex gap-10 mb-20'>
           <img className='  md:w-1/5  rounded-2xl md:ms-32' src="https://i.ibb.co/4S3DQJk/48e7ed5d-5bde-47c6-a51a-c44744d525fa.jpg" alt="" />
           <div>
             <h1 className='text-2xl'><span className='text-4xl'> Welcome to the Marvel Fantasy World Toy Shop!</span> <br /> We're thrilled to provide you with a wide range of toys and merchandise inspired by the Marvel universe. <br /> Whether you're a fan of Iron Man, Spider-Man, Captain America, or any other iconic Marvel character, <br /> you've come to the right place.</h1>
-            <div className='md:flex gap-5'>
+            <div className='md:flex gap-5 '>
               <img src="https://i.ibb.co/HGy4nmk/546683-Primary-515-Wx515-H-context-b-WFzd-GVyf-Glt-YWdlc3w3-Nj-Q5-OXxpb-WFn-ZS9qc-GVnf-Glt-YWdlcy9o.jpg" alt="" />
               <img src='https://i.ibb.co/Y2MBCj5/563564-Primary-515-Wx515-H-context-b-WFzd-GVyf-Glt-YWdlc3wz-ODM2-NDh8a-W1h-Z2-Uvan-Bl-Z3xpb-WFn-ZXMv.jpg' alt="" />
             </div>

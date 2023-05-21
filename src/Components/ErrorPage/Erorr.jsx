@@ -6,7 +6,7 @@ const Error = () => {
     return (
         <div>
             
-               <img className='img'  src='https://i.ibb.co/QCzjqKN/error-404-concept-illustration-114360-1811.jpg' alt="" />
+               <img className='img'  src='https://i.ibb.co/xHVWqcN/404-error-with-tired-person-concept-illustration-114360-7899.jpg' alt="" />
                <Link className='text-xl font-medium  bg-slate-800 hover:text-teal-300 duration-1000' to='/'> <button  className=' button-container btn mt-40 mx-50%  bg-emerald-700-800 '>Back To home</button></Link>
             
 

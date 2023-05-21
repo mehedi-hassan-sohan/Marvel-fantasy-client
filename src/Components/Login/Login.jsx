@@ -3,9 +3,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import useTitle from "../../../hooks/useTitle";
 
 
-const Login = () => { 
+const Login = () => {  
+  useTitle('Login')
    const { googleLogin , SignIn ,setUserInfo} = useContext(AuthContext)
   // const [googleData,setGoogleData] = useState({})
   const [error, setError] = useState("");
